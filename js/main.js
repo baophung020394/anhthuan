@@ -27,5 +27,29 @@ App = {};
       $(this).find("ul").toggleClass("active");
       console.log(this);
     });
+
+    $(".item").slice(0, 6).show();
+    $(".loadmore button").on("click", function (e) {
+        e.preventDefault();
+        $(".item:hidden").slice(0, 4).slideDown();
+        if ($(".item:hidden").length == 0) {
+            $(".loadless").fadeIn("slow");
+            $(".loadmore").hide();
+        }
+    });
+
+    $(".loadless").on('click', function(e) {
+      e.preventDefault();
+      $('item:not(:lt(6))').fadeOut();
+      $(".loadmore").fadeIn('slow');
+      $(".loadless").hide();
+  
+      desiredHeight = $(window).height();
+  
+      $('html,body').animate({
+        scrollTop: $(this).offset().top + desiredHeight
+      }, 1500);
+    });
+
   });
 })(jQuery);
