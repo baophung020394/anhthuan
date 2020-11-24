@@ -286,6 +286,37 @@ header .navbar-light .navbar-nav .nav-link {
   margin-right: 0;
 }
 /* End Footer */
+/* Project */
+.section-banner {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+.main h2 {
+  font-size: var(--font-size18);
+  text-align: justify;
+  line-height: var(--line-height27);
+  margin-bottom: 2rem;
+}
+.items {
+  margin-bottom: 2rem;
+}
+.items .item {
+  background: var(--color7);
+  padding: 2rem;
+}
+.items .item h2 {
+  font-size: var(--font-size18);
+  text-align: justify;
+  line-height: var(--line-height27);
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 1.5rem 0 0;
+}
+/* End Project */
 /* 768px */
 @media only screen and (min-width: 768px) {
   /* Menu */
@@ -407,10 +438,10 @@ header .navbar-light .navbar-nav .nav-link {
 
 /* 1300px */
 @media only screen and (min-width: 1400px) {
-  .container {
+  /* .container {
     width: 140rem;
     max-width: 140rem;
-  }
+  } */
   /* Menu */
   header .navbar-nav li {
     margin-right: 5rem;
