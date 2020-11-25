@@ -28,7 +28,7 @@ input::placeholder {
 h2 {
   color: var(--color14);
   font-size: var(--font-size26);
-  font-family: var(--font-family4);
+  font-family: var(--font-family3);
 }
 a:focus,
 button:focus {
