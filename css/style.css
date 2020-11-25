@@ -25,6 +25,10 @@ body {
 input::placeholder {
   font-size: var(--secondary-font-size);
 }
+h2 {
+  color: var(--color14);
+  font-size: var(--font-size26);
+}
 a:focus,
 button:focus {
   outline: none;
@@ -64,6 +68,7 @@ li {
   --color19: #c3c3c3;
   --color20: #b0aa63;
   --color21: #f0c676;
+  --color22: #dfdfdf;
   --font-size13: 1.3rem;
   --font-size15: 1.5rem;
   --font-size17: 1.7rem;
@@ -72,6 +77,7 @@ li {
   --font-size22: 2.2rem;
   --font-size24: 2.4rem;
   --font-size26: 2.6rem;
+  --font-size28: 2.8rem;
   --font-size30: 3rem;
   --font-size35: 3.5rem;
   --font-size40: 4rem;
@@ -457,6 +463,10 @@ header .navbar {
   background-color: var(--color13);
   padding: 3rem 2rem;
 }
+.section-note .note h1 {
+  color: var(--color14);
+  font-size: var(--font-size28);
+}
 .section-note .note h2 {
   line-height: var(--line-height36);
   font-size: var(--font-size26);
@@ -578,6 +588,32 @@ form .form-group {
   margin-bottom: 2rem;
 }
 /* Contact */
+/* Detail */
+.detail .card {
+  border: unset;
+}
+.detail .card h5 {
+  font-size: var(--font-size18);
+  color: var(--color14);
+}
+.video-youtube {
+  margin: 2rem 0;
+}
+.video-youtube iframe {
+  
+  width: 100%;
+}
+.section-download {
+  padding: 6rem 0;
+  background-color: var(--color22);
+}
+.section-download h2 {
+  margin-bottom: 2rem;
+}
+.section-download .section-card .item-card {
+  background-color: var(--color5);
+}
+/* End Detail */
 /* 768px */
 @media only screen and (min-width: 768px) {
   /* Menu */
@@ -705,6 +741,33 @@ form .form-group {
     width: 100%;
   }
   /* End Contact */
+  /* Detail */
+  .detail .cards {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .detail .card img {
+    width: 80%;
+  }
+  .detail .card h5 {
+    margin-bottom: 3rem;
+  }
+  .detail .card .no-gutters {
+    align-items: center;
+  }
+  .video-youtube {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .video-youtube iframe {
+    height: 40rem;
+  }
+  .section-download h2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* End Detail */
+  
 }
 /* 992px */
 @media only screen and (min-width: 992px) {
@@ -805,6 +868,11 @@ form .form-group {
     height: 40rem;
   }
   /* Contact */
+  /* Detail */
+  .video-youtube iframe {
+    height: 60rem;
+  }
+  /* End Detail */
 }
 /* 1024px */
 @media only screen and (min-width: 1024px) {
@@ -851,6 +919,11 @@ form .form-group {
     height: 53rem;
   }
   /* Contact */
+  /* Detail */
+  .detail .card img {
+    width: 80%;
+  }
+  /* End Detail */
 }
 
 /* 1300px */
