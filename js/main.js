@@ -30,20 +30,20 @@ App = {};
 
     // Page Project
     $(".item").slice(0, 6).show();
-    $(".projects .loadmore button").on("click", function (e) {
+    $(".loadmore button").on("click", function (e) {
         e.preventDefault();
-        $(".item:hidden").slice(0, 4).slideDown();
+        $(".item:hidden").slice(0, 6).slideDown();
         if ($(".item:hidden").length == 0) {
-            $(".projects .loadless").fadeIn("slow");
-            $(".projects .loadmore").hide();
+            $(".loadless").fadeIn("slow");
+            $(".loadmore").hide();
         }
     });
 
-    $(".projects .loadless").on('click', function(e) {
+    $(".loadless").on('click', function(e) {
       e.preventDefault();
       $('.item:not(:lt(6))').fadeOut();
-      $(".projects .loadmore").fadeIn('slow');
-      $(".projects .loadless").hide();
+      $(".loadmore").fadeIn('slow');
+      $(".loadless").hide();
   
       desiredHeight = $(window).height();
   
@@ -56,7 +56,13 @@ App = {};
     $(".item-card").slice(0, 4).css('display', 'flex');
     $(".download .loadmore button").on("click", function (e) {
         e.preventDefault();
-        $(".item-card:hidden").slice(0, 4).slideDown();
+        $(".item-card:hidden").slice(0, 4).slideDown({
+          start: function () {
+            $(this).css({
+              display: "flex"
+            })
+          }
+        });
         if ($(".item-card:hidden").length == 0) {
             $(".download .loadless").fadeIn("slow");
             $(".download .loadmore").hide();
