@@ -28,21 +28,46 @@ App = {};
       console.log(this);
     });
 
+    // Page Project
     $(".item").slice(0, 6).show();
-    $(".loadmore button").on("click", function (e) {
+    $(".projects .loadmore button").on("click", function (e) {
         e.preventDefault();
         $(".item:hidden").slice(0, 4).slideDown();
         if ($(".item:hidden").length == 0) {
-            $(".loadless").fadeIn("slow");
-            $(".loadmore").hide();
+            $(".projects .loadless").fadeIn("slow");
+            $(".projects .loadmore").hide();
         }
     });
 
-    $(".loadless").on('click', function(e) {
+    $(".projects .loadless").on('click', function(e) {
       e.preventDefault();
-      $('item:not(:lt(6))').fadeOut();
-      $(".loadmore").fadeIn('slow');
-      $(".loadless").hide();
+      $('.item:not(:lt(6))').fadeOut();
+      $(".projects .loadmore").fadeIn('slow');
+      $(".projects .loadless").hide();
+  
+      desiredHeight = $(window).height();
+  
+      $('html,body').animate({
+        scrollTop: $(this).offset().top + desiredHeight
+      }, 1500);
+    });
+
+    // Page Download
+    $(".item-card").slice(0, 4).css('display', 'flex');
+    $(".download .loadmore button").on("click", function (e) {
+        e.preventDefault();
+        $(".item-card:hidden").slice(0, 4).slideDown();
+        if ($(".item-card:hidden").length == 0) {
+            $(".download .loadless").fadeIn("slow");
+            $(".download .loadmore").hide();
+        }
+    });
+
+    $(".download .loadless").on('click', function(e) {
+      e.preventDefault();
+      $('.item-card:not(:lt(4))').fadeOut();
+      $(".download .loadmore").fadeIn('slow');
+      $(".download .loadless").hide();
   
       desiredHeight = $(window).height();
   

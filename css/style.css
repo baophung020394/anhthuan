@@ -17,7 +17,7 @@ img {
   height: auto;
 }
 body {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-size: var(--primary-font-size);
   line-height: 1.8;
   color: var(--color15);
@@ -62,6 +62,8 @@ li {
   --color18: #f6f6f6;
   --color18: #8e8e8e;
   --color19: #c3c3c3;
+  --color20: #b0aa63;
+  --color21: #f0c676;
   --font-size13: 1.3rem;
   --font-size15: 1.5rem;
   --font-size17: 1.7rem;
@@ -102,7 +104,7 @@ header .navbar-toggler {
   font-size: 1.8rem;
 }
 header .navbar-light .navbar-nav .active > .nav-link {
-  color: var(--color3);
+  color: var(--color21);
 }
 header .languages {
   text-align: center;
@@ -118,7 +120,7 @@ header .navbar-nav li {
   border-bottom: 1px solid var(--color10);
 }
 header .navbar-light .navbar-nav .nav-link:hover {
-  color: var(--color3);
+  color: var(--color21);
 }
 header .navbar ul li {
   position: relative;
@@ -170,7 +172,7 @@ header .navbar-light .navbar-nav .nav-link {
   text-transform: uppercase;
 }
 header .navbar {
-  background-image: url('../images/menuline.jpg');
+  background-image: url("../images/menuline.jpg");
   background-repeat: no-repeat;
 }
 /* End Menu */
@@ -352,7 +354,6 @@ header .navbar {
   border-radius: 50%;
   width: 6.4rem;
   height: 6.4rem;
-  
 }
 .loadless button i,
 .loadmore button i {
@@ -361,7 +362,7 @@ header .navbar {
 /* End Project */
 /* News */
 .section-banner-news {
-  background-image: url('../images/bannernews.jpg');
+  background-image: url("../images/bannernews.jpg");
   /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -371,14 +372,132 @@ header .navbar {
 /* End News */
 /* Download */
 .section-banner-download {
-  background-image: url('../images/bannertailieu.jpg');
+  background-image: url("../images/bannertailieu.jpg");
   /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
   height: 30rem;
   margin-bottom: 2rem;
 }
+.section-card  {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.section-card .item-card {
+  border: 0.1rem solid var(--color13);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+.section-card .item-card img {
+  width: 3rem;
+  vertical-align: baseline;
+  margin-right: 2rem;
+}
+.section-card .item-card .left {
+  margin-bottom: 2rem;
+}
+.section-card .item-card .left p {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.section-card .item-card .left span.name {
+  display: block;
+  padding-left: 5.4rem;
+}
+.section-card .item-card .left .namefile {
+  display: inline-block;
+}
+.section-card .item-card .left .namefile a {
+  color: var(--color14);
+  display: block;
+}
+.section-card .item-card .btn-download {
+  border: none;
+  background-color: var(--color12);
+  color: var(--color5);
+  padding: 0.2rem 1rem;
+}
 /* End Download */
+/* Breadcrumb */
+.breadcrumbs {
+  background-color: var(--color14);
+}
+.breadcrumbs ul.breadcrumb {
+  padding: 1rem 1.6rem;
+  list-style: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: var(--color14);
+}
+.breadcrumbs ul.breadcrumb li {
+  display: inline;
+  font-size: var(--secondary-font-size);
+}
+.breadcrumbs ul.breadcrumb li img {
+  width: 0.8rem;
+  margin: 0 0.5rem;
+}
+.breadcrumbs ul.breadcrumb li a {
+  color: var(--color20);
+  text-decoration: none;
+}
+.breadcrumbs ul.breadcrumb li a:hover {
+  color: var(--color20);
+  text-decoration: underline;
+}
+.breadcrumbs ul.breadcrumb li:last-child {
+  color: var(--color5);
+}
+.section-note {
+  margin-bottom: 2rem;
+}
+.section-note .note {
+  background-color: var(--color13);
+  padding: 3rem 2rem;
+}
+.section-note .note h2 {
+  line-height: var(--line-height36);
+  font-size: var(--font-size26);
+}
+/* End Breadcrumb */
+/* Filer */
+.filters {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.filters .filter {
+  background-color: var(--color14);
+  color: var(--color5);
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+}
+.filters .filter i {
+  margin-right: 1rem;
+}
+.filters .search input {
+  border: 0.1rem solid var(--color13);
+  padding: 0.7rem;
+  width: 100%;
+  padding-left: 3rem;
+}
+.filters .search i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.filters .search {
+  position: relative;
+}
+/* End Filer */
 /* 768px */
 @media only screen and (min-width: 768px) {
   /* Menu */
@@ -421,11 +540,64 @@ header .navbar {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
   }
   .items .item {
     width: 32rem;
   }
   /* End Project */
+  /* Breadcrumb */
+  .section-note .note {
+    padding: 5rem 10rem;
+  }
+  /* End Breadcrumb */
+  /* Filer */
+  .filters {
+    max-width: 72rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+  }
+  .filters .search,
+  .filters .filter {
+    width: 44.8%;
+  }
+  .filters .filter {
+    margin-bottom: 0;
+  }
+  /* End Filer */
+  /* Download */
+  .section-card .item-card {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+  }
+  .section-card .item-card .right {
+    width: 17%;
+  }
+  .section-card .item-card .left {
+    width: 83%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .section-card .item-card .left img {
+    margin-right: 3rem;
+  }
+  .section-card .item-card .left span.name {
+    display: inline-block;
+    padding-left: 0;
+  }
+  .section-card .item-card .left .namefile {
+    margin-right: 6rem;
+  }
+  /* End Download */
 }
 /* 992px */
 @media only screen and (min-width: 992px) {
@@ -502,7 +674,20 @@ header .navbar {
     width: 29rem;
   }
   /* End Project */
-  
+  /* Download */
+  .section-banner-download {
+    height: 40rem;
+  }
+  /* End Download */
+  /* Filer */
+  .filters {
+    max-width: 96rem;
+  }
+  .filters .search,
+  .filters .filter {
+    width: 49%;
+  }
+  /* End Filer */
 }
 /* 1024px */
 @media only screen and (min-width: 1024px) {
@@ -519,7 +704,7 @@ header .navbar {
   }
   /* End Footer */
   /* Banner */
-   .section-banner {
+  .section-banner {
     height: 53rem;
     background-position: unset;
   }
@@ -529,6 +714,16 @@ header .navbar {
     width: 35rem;
   }
   /* End Project */
+  /* Download */
+  .section-banner-download {
+    height: 53rem;
+  }
+  /* End Download */
+  /* Filer */
+  .filters {
+    max-width: 114rem;
+  }
+  /* End Filer */
 }
 
 /* 1300px */
