@@ -1,11 +1,11 @@
 /* Style for All */
 @font-face {
-  font-family: GothamDS;
-  src: url(../fonts/Gotham-Thin.otf);
+  font-family: GothamDS-Medium;
+  src: url(../fonts/Gotham-Medium.otf);
 }
 @font-face {
-  font-family: UTMAircona;
-  src: url(../fonts/UTMAircona.ttf);
+  font-family: GothamDS-Thin;
+  src: url(../fonts/Gotham-Thin.otf);
 }
 html,
 body {
@@ -28,6 +28,7 @@ input::placeholder {
 h2 {
   color: var(--color14);
   font-size: var(--font-size26);
+  font-family: var(--font-family4);
 }
 a:focus,
 button:focus {
@@ -42,7 +43,8 @@ li {
 :root {
   --font-family1: "UTMAircona";
   --font-family2: "UTMAptima";
-  --font-family3: "GothamDS";
+  --font-family3: "GothamDS-Medium";
+  --font-family4: "GothamDS-Thin";
   --primary-color: #8e8e8e;
   --primary-font-size: 1.6rem;
   --secondary-font-size: 1.4rem;
@@ -618,6 +620,10 @@ form .form-group {
 /* 768px */
 @media only screen and (min-width: 768px) {
   /* Menu */
+  header .navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
   header .top-header {
     text-align: right;
   }
