@@ -104,7 +104,7 @@ h2.title {
 }
 /* Menu */
 header .navbar-brand {
-  width: 19rem;
+  width: 17.4rem;
 }
 header .navbar {
   width: 100%;
@@ -780,6 +780,7 @@ form .form-group {
 @media only screen and (min-width: 992px) {
   header .navbar {
     align-items: flex-start;
+    padding-top: 1rem;
   }
   header .navbar-nav {
     width: 100%;
@@ -886,6 +887,10 @@ form .form-group {
 }
 /* 1200px */
 @media only screen and (min-width: 1200px) {
+  .container {
+    width: 110rem;
+    max-width: 110rem;
+  }
   /* Footer */
   #footer .bot-footer .policies {
     align-items: center;
