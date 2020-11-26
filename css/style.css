@@ -1,7 +1,7 @@
 /* Style for All */
 @font-face {
-  font-family: UTMAptima;
-  src: url(../fonts/UTMAptima.ttf);
+  font-family: GothamDS;
+  src: url(../fonts/Gotham-Thin.otf);
 }
 @font-face {
   font-family: UTMAircona;
@@ -17,7 +17,7 @@ img {
   height: auto;
 }
 body {
-  font-family: "Arial";
+  font-family: var(--font-family3);
   font-size: var(--primary-font-size);
   line-height: 1.8;
   color: var(--color15);
@@ -42,6 +42,7 @@ li {
 :root {
   --font-family1: "UTMAircona";
   --font-family2: "UTMAptima";
+  --font-family3: "GothamDS";
   --primary-color: #8e8e8e;
   --primary-font-size: 1.6rem;
   --secondary-font-size: 1.4rem;
