@@ -780,7 +780,7 @@ form .form-group {
 @media only screen and (min-width: 992px) {
   header .navbar {
     align-items: flex-start;
-    padding-top: 1rem;
+    padding: 1.4rem 0;
   }
   header .navbar-nav {
     width: 100%;
@@ -795,6 +795,9 @@ form .form-group {
   }
   header .navbar-nav li:last-child {
     margin-right: 0;
+  }
+  header .navbar-nav li:last-child a {
+    padding-right: 0 !important;
   }
   header .languages {
     border-bottom: unset;
