@@ -72,6 +72,7 @@ li {
   --color20: #b0aa63;
   --color21: #f0c676;
   --color22: #dfdfdf;
+  --font-size12: 1.2rem;
   --font-size13: 1.3rem;
   --font-size15: 1.5rem;
   --font-size17: 1.7rem;
@@ -154,13 +155,13 @@ header .submenu li a {
 }
 header .top-header {
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   background-color: var(--color11);
 }
 header .top-header a {
   position: relative;
   color: var(--color15);
-  font-size: var(--secondary-font-size);
+  font-size: var(--font-size12);
   font-weight: var(--font-weight700);
   margin-right: 1rem;
 }
@@ -778,6 +779,12 @@ form .form-group {
 }
 /* 992px */
 @media only screen and (min-width: 992px) {
+  header .navbar-light .navbar-nav .nav-link {
+    font-size: var(--font-size12);
+  }
+  header .top-header .group-login {
+    padding-right: 0;
+  }
   header .navbar {
     align-items: flex-start;
     padding: 1.4rem 0;
